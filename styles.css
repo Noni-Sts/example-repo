@@ -1,0 +1,193 @@
+/*GENERAL STYLES*/
+:root {
+  --accent-color: rgb(175, 112, 112);
+  --secondary-bg-color: rgb(235, 221, 222);
+  --text-color: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "DM Serif Text", serif;
+}
+
+/*CSS RESET - notes: impacts spacing, impacts list style i.e. nav and layouts. Standardise eleemnt s across browsers*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  font-weight: 300;
+  scroll-behavior: smooth; /*smoother scroll as oppsoed to jump when functional*/
+}
+
+/*Headings*/
+
+header,
+nav {
+  background-color: #ebdede;
+}
+
+h1 {
+  font-family: var(--font-secondary);
+  font-weight: 200;
+  font-size: 5rem;
+  position: relative; /*position property - relative to it's postion top left header*/
+  margin-left: 1rem;
+}
+
+h1,
+.icons {
+  display: inline;
+}
+
+.icons {
+  position: absolute; /*positioned absolutely to parent property h1*/
+  right: 0;
+  margin-top: 2rem; /*move it lower to line up w/ h1*/
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/*Nav*/
+
+nav ul {
+  margin-top: 3rem;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block; /* Makes the list items display in a row */
+  margin-right: 1rem; /* Adds space between the items */
+}
+
+/*style links*/
+a {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+/* Bootstrap grid container customization */
+#shop .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* space between each item */
+  margin-left: 5rem; /*moves rows closer to centre*/
+}
+
+/* Product images */
+.product img {
+  width: 20rem; /* rem width and height as opposed to fixed px */
+  height: 20rem;
+  object-fit: cover; /*  images remain proportionate */
+  margin-bottom: 1rem; /* space below the image */
+}
+
+/* Product Section */
+.product {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#shop .col-12 {
+  margin-bottom: 2rem;
+}
+
+.product img:hover {
+  transform: scale(1.1); /* over for img, larger number, larger the img */
+  transition: transform 1s ease; /* Smooth transition - same as traditional hover i.e button hover */
+}
+
+p {
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 2rem;
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  transition: background-color 0.3s ease; /*  smooth hover effect */
+}
+
+/*Form Section*/
+
+footer {
+  background-color: #ebdede;
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--font-primary);
+}
+
+.footer-logo i {
+  font-size: 3rem;
+  color: var(--accent-color);
+}
+
+footer h3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+footer form label {
+  font-weight: 500;
+}
+
+footer form input {
+  width: 14rem;
+  height: 2rem;
+  border: none;
+  border-radius: 1rem;
+  margin-right: 3rem; /* Adds space between each input field */
+  margin-left: 0.5rem;
+}
+
+footer form button,
+button {
+  background-color: var(--accent-color);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+}
+
+footer form button:hover,
+button:hover {
+  background-color: var(--secondary-bg-color); /* Darker shade on hover */
+  color: black;
+}
